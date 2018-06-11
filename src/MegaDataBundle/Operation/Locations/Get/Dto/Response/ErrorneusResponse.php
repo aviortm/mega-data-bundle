@@ -2,12 +2,15 @@
 
 namespace MegaDataBundle\Operation\Locations\Get\Dto\Response;
 
+use JMS\Serializer\Annotation as JMS;
 use MegaDataBundle\Operation\Response\Error;
 
 final class ErrorneusResponse extends BaseResponse
 {
     /**
      * @var Error
+     *
+     * @JMS\Type(Error::class)
      */
     private $data;
 

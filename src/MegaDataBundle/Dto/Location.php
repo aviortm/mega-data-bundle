@@ -2,15 +2,21 @@
 
 namespace MegaDataBundle\Dto;
 
+use JMS\Serializer\Annotation as JMS;
+
 final class Location
 {
     /**
      * @var string
+     *
+     * @JMS\Type("string")
      */
     private $name;
 
     /**
      * @var Coordinates
+     *
+     * @JMS\Type(Coordinates::class)
      */
     private $coordinates;
 

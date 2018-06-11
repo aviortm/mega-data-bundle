@@ -9,9 +9,9 @@ use MegaDataBundle\Common\Interaction\Dto\Response\ResponseInterface as ApiRespo
 interface ResponseTransformerInterface
 {
     /**
-     * @param ResponseInterface $request
+     * @param ResponseInterface $response
      * @return ApiResponseInterface
      * @throws RemoteCallException
      */
-    public function transform(ResponseInterface $request): ApiResponseInterface;
+    public function transform(ResponseInterface $response): ApiResponseInterface;
 }

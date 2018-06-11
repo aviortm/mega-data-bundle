@@ -9,7 +9,7 @@ use MegaDataBundle\Common\Interaction\Dto\Response\ResponseInterface;
  * @JMS\Discriminator(
  *     field = "type",
  *     map = {
- *      "true": SuccessfulResponse::class,
+ *      "true": Response::class,
  *      "false": ErrorneusResponse::class
  *      }
  * )
@@ -18,6 +18,8 @@ abstract class BaseResponse implements ResponseInterface
 {
     /**
      * @var bool
+     *
+     * @JMS\Type("bool")
      */
     private $success;
 

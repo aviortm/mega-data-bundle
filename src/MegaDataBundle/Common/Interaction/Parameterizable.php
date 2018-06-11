@@ -2,6 +2,7 @@
 
 namespace MegaDataBundle\Common\Interaction;
 
+use GuzzleHttp\Psr7\Uri;
 use MegaDataBundle\Common\Interaction\Dto\Request\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
@@ -22,7 +23,7 @@ class Parameterizable implements UrlResolverInterface
      * @param string $queryString
      */
     public function __construct(string $baseUrl, string $queryString)
-    {
+    {var_dump($baseUrl);
         $this->baseUrl = $baseUrl;
         $this->queryString = $queryString;
     }
@@ -32,15 +33,6 @@ class Parameterizable implements UrlResolverInterface
      */
     public function resolve(RequestInterface $request): UriInterface
     {
-        return
-            new Uri(
-                strtr(
-                    '{baseUrl}?{queryString}',
-                    [
-                        '{baseUrl}' => $this->baseUrl,
-                        '{queryString}' => $this->queryString,
-                    ]
-                )
-            );
+        return new Uri($this->baseUrl);
     }
 }

@@ -19,5 +19,11 @@ class MegaDataExtension extends Extension
             new FileLocator(__DIR__.'/../Resources/config')
         );
         $loader->load('services.yml');
+
+        $configuration = new Configuration();
+
+        $config = $this->processConfiguration($configuration, $configs);
+
+        $container->setParameter('mega_data.base.url', $config['base_url']);
     }
 }
