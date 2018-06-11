@@ -13,18 +13,18 @@
 
 2. run command:
 ```
-add composer update aviortm/mega-data
+composer require aviortm/mega-data
 ```
 
 ## Configuration:
-You can set base url fot mega data
+You can set base url for mega data
 for example:
 ```
 mega_data:
-    base_url: http://content-im.dc.docker
+    base_url: http://localhost
 ```    
 
-## Usage 
+## Usage example
 
 ```php
 <?php
