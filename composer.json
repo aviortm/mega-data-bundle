@@ -1,0 +1,41 @@
+{
+    "name": "aviortm/mega-data",
+    "license": "proprietary",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.0.8",
+        "symfony/config": "^3.4",
+        "symfony/console": "^3.4",
+        "symfony/dependency-injection": "3.4",
+        "symfony/http-kernel": "3.4.*",
+        "symfony/http-foundation": "^3.4",
+        "symfony/monolog-bundle": "^3.1",
+        "symfony/validator": "^3.4",
+        "boldtrn/jsonb-bundle": "^1.1",
+        "jms/serializer": "^1.7",
+        "guzzlehttp/guzzle": "6.*"
+    },
+    "replace": {
+        "ru-framework/basics": "self.version"
+    },
+    "provide": {
+        "ru-framework/basics": "self.version"
+    },
+    "suggest": {
+        "boldtrn/jsonb-bundle": "Require this if you need to use postgres jsonb field in doctrine",
+        "jms/serializer-bundle": "(^1.1) Require this in your project if you need to use jms serializer or/and ru_framework.basics.jms.object_builder service",
+        "guzzlehttp/guzzle": "(~6.2) Require if you want to send session process fingerprint via guzzle http client"
+    },
+    "require-dev": {
+    }
+}

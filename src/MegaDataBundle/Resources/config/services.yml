@@ -1,0 +1,11 @@
+imports:
+    - { resource: 'common.yml' }
+
+servises:
+#    mega_data.interaction.protocol:
+#        class: MegaDataBundle\Interaction\Protocol
+#        arguments:
+#            - '@mega_data.interaction.location.remote_call'
+#
+#    mega_data.interaction.location.remote_call:
+#        class: MegaDataBundle\Common\Interaction\RemoteCall
