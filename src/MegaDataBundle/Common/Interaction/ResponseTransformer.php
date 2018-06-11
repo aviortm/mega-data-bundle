@@ -41,7 +41,7 @@ final class ResponseTransformer implements ResponseTransformerInterface
      * {@inheritdoc}
      */
     public function transform(ResponseInterface $response): ApiResponseInterface
-    {var_dump((string) $response->getBody());
+    {
         try {
             return
                 $this->serializer->deserialize(

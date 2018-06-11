@@ -6,7 +6,7 @@ use GuzzleHttp\Psr7\Uri;
 use MegaDataBundle\Common\Interaction\Dto\Request\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
-class Parameterizable implements UrlResolverInterface
+class BaseUrl implements UrlResolverInterface
 {
     /**
      * @var string
@@ -14,18 +14,11 @@ class Parameterizable implements UrlResolverInterface
     private $baseUrl;
 
     /**
-     * @var string
-     */
-    private $queryString;
-
-    /**
      * @param string $baseUrl
-     * @param string $queryString
      */
-    public function __construct(string $baseUrl, string $queryString)
-    {var_dump($baseUrl);
+    public function __construct(string $baseUrl)
+    {
         $this->baseUrl = $baseUrl;
-        $this->queryString = $queryString;
     }
 
     /**
