@@ -3,9 +3,9 @@
 namespace MegaDataBundle\Common\Interaction;
 
 use JMS\Serializer\SerializerInterface;
-use MegaDataBundle\Common\Interaction\Dto\Response\ResponseInterface;
+use Psr\Http\Message\ResponseInterface;
 use MegaDataBundle\Common\Interaction\Exception\RemoteCallException;
-use Psr\Http\Message\ResponseInterface as ApiResponseInterface;
+use MegaDataBundle\Common\Interaction\Dto\Response\ResponseInterface as ApiResponseInterface;
 use Throwable;
 
 final class ResponseTransformer implements ResponseTransformerInterface
@@ -24,6 +24,18 @@ final class ResponseTransformer implements ResponseTransformerInterface
      * @var string
      */
     private $requestClass;
+
+    /**
+     * @param SerializerInterface $serializer
+     * @param string $format
+     * @param string $requestClass
+     */
+    public function __construct(SerializerInterface $serializer, string $format, string $requestClass)
+    {
+        $this->serializer = $serializer;
+        $this->format = $format;
+        $this->requestClass = $requestClass;
+    }
 
     /**
      * {@inheritdoc}

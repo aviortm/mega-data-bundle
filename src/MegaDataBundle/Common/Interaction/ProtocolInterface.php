@@ -3,13 +3,13 @@
 namespace MegaDataBundle\Common\Interaction;
 
 use MegaDataBundle\Operation\Locations\Get\Dto\Request\Request;
-use MegaDataBundle\Operation\Locations\Get\Dto\Response\Response;
+use MegaDataBundle\Operation\Locations\Get\Dto\Response\BaseResponse;
 
 interface ProtocolInterface
 {
     /**
      * @param Request $request
-     * @return Response
+     * @return BaseResponse
      */
-    public function locations(Request $request): Response;
+    public function locations(Request $request): BaseResponse;
 }

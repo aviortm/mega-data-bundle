@@ -10,7 +10,7 @@ use MegaDataBundle\Common\Interaction\Dto\Response\ResponseInterface;
  *     field = "type",
  *     map = {
  *      "true": SuccessfulResponse::class,
- *      "false": ErrorneusResponse::class"
+ *      "false": ErrorneusResponse::class
  *      }
  * )
  */

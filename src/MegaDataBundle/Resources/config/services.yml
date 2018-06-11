@@ -1,11 +1,31 @@
 imports:
     - { resource: 'common.yml' }
 
-servises:
-#    mega_data.interaction.protocol:
-#        class: MegaDataBundle\Interaction\Protocol
-#        arguments:
-#            - '@mega_data.interaction.location.remote_call'
-#
-#    mega_data.interaction.location.remote_call:
-#        class: MegaDataBundle\Common\Interaction\RemoteCall
+services:
+    mega_data.protocol:
+        class: MegaDataBundle\Interaction\Protocol
+        arguments:
+            - '@mega_data.interaction.location.remote_call'
+
+    mega_data.location.remote_call:
+        class: MegaDataBundle\Common\Interaction\RemoteCall
+        arguments:
+            - '@mega_data.transport'
+            - '@mega_data.location.request_transformer'
+
+    mega_data.location.request_transformer:
+        class: MegaDataBundle\Common\Interaction\RequestTransformer
+        arguments:
+            - 'get'
+            - '@mega_data.location.url_resolver'
+
+    mega_data.location.url_resolver:
+        class: MegaDataBundle\Common\Interaction\Parameterizable
+        arguments:
+            - 'http://lochost'
+            - 'location'
+
+    mega_data.common_interaction.response_transformer:
+        class: MegaDataBundle\Common\Interaction\ResponseTransformer
+        arguments:
+            - '@jms_serializer.serializer'

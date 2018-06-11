@@ -5,6 +5,7 @@ namespace MegaDataBundle\Interaction;
 use MegaDataBundle\Common\Interaction\ProtocolInterface;
 use MegaDataBundle\Common\Interaction\RemoteCallInterface;
 use MegaDataBundle\Operation\Locations\Get\Dto\Request\Request;
+use MegaDataBundle\Operation\Locations\Get\Dto\Response\BaseResponse;
 
 final class Protocol implements ProtocolInterface
 {

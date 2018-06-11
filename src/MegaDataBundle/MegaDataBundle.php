@@ -6,5 +6,8 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 final class MegaDataBundle extends Bundle
 {
+    public function __construct()
+    {
 
+    }
 }

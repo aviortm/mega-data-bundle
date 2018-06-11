@@ -2,7 +2,9 @@
 
 namespace MegaDataBundle\Operation\Locations\Get\Dto\Request;
 
-final class Request
+use MegaDataBundle\Common\Interaction\Dto\Request\RequestInterface;
+
+final class Request implements RequestInterface
 {
 
 }
