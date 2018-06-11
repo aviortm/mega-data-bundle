@@ -24,7 +24,7 @@ services:
             - '@mega_data.location.url_resolver'
 
     mega_data.location.url_resolver:
-        class: MegaDataBundle\Common\Interaction\Parameterizable
+        class: MegaDataBundle\Common\Interaction\BaseUrl
         arguments:
             - '%mega_data.base.location.url%'
             - ''

@@ -52,7 +52,6 @@ class RemoteCall implements RemoteCallInterface
 
         try {
             $httpResponse = $this->send($httpRequest);
-            var_dump($httpResponse);
         } catch (TransferException $e) {
             throw new RemoteCallException('Remote call exception occurred', 0, $e);
         }

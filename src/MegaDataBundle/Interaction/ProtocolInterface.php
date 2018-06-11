@@ -1,6 +1,6 @@
 <?php
 
-namespace MegaDataBundle\Common\Interaction;
+namespace MegaDataBundle\Interaction;
 
 use MegaDataBundle\Operation\Locations\Get\Dto\Request\Request;
 use MegaDataBundle\Operation\Locations\Get\Dto\Response\BaseResponse;
