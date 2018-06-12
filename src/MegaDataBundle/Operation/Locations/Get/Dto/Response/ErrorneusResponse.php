@@ -3,9 +3,9 @@
 namespace MegaDataBundle\Operation\Locations\Get\Dto\Response;
 
 use JMS\Serializer\Annotation as JMS;
-use MegaDataBundle\Operation\Response\Error;
+use MegaDataBundle\Operation\Dto\Response\Error;
 
-final class ErrorneusResponse extends BaseResponse
+class ErrorneusResponse extends BaseResponse
 {
     /**
      * @var Error
@@ -31,5 +31,13 @@ final class ErrorneusResponse extends BaseResponse
         $this->data = $data;
 
         return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getSuccess()
+    {
+        return "";
     }
 }

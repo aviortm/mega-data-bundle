@@ -1,6 +1,6 @@
 <?php
 
-namespace MegaDataBundle\Operation\Response;
+namespace MegaDataBundle\Operation\Dto\Response;
 
 use JMS\Serializer\Annotation as JMS;
 

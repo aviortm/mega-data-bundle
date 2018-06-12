@@ -5,7 +5,7 @@ namespace MegaDataBundle\Operation\Locations\Get\Dto\Response;
 use JMS\Serializer\Annotation as JMS;
 use MegaDataBundle\Dto\Locations;
 
-final class Response extends BaseResponse
+class Response extends BaseResponse
 {
     /**
      * @var Locations
@@ -31,5 +31,13 @@ final class Response extends BaseResponse
         $this->data = $data;
 
         return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getSuccess()
+    {
+        return true;
     }
 }

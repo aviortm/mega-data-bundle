@@ -7,38 +7,17 @@ use MegaDataBundle\Common\Interaction\Dto\Response\ResponseInterface;
 
 /**
  * @JMS\Discriminator(
- *     field = "type",
+ *     field = "success",
  *     map = {
- *      "true": Response::class,
- *      "false": ErrorneusResponse::class
+ *      "": ErrorneusResponse::class,
+ *      true: Response::class
  *      }
  * )
  */
 abstract class BaseResponse implements ResponseInterface
 {
     /**
-     * @var bool
-     *
-     * @JMS\Type("bool")
+     * @return bool
      */
-    private $success;
-
-    /**
-     * @return bool|null
-     */
-    public function isSuccess()
-    {
-        return $this->success;
-    }
-
-    /**
-     * @param bool|null $success
-     * @return static
-     */
-    public function setSuccess(bool $success = null)
-    {
-        $this->success = $success;
-
-        return $this;
-    }
+    abstract public function getSuccess();
 }

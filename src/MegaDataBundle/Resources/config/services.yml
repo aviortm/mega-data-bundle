@@ -34,4 +34,4 @@ services:
         arguments:
             - '@jms_serializer.serializer'
             - 'json'
-            - 'MegaDataBundle\Operation\Locations\Get\Dto\Response\Response'
+            - 'MegaDataBundle\Operation\Locations\Get\Dto\Response\BaseResponse'
